@@ -9,27 +9,109 @@
 <!-- CSS (load bootstrap from a CDN) -->
 <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
 <style>
-      
+    .sidenav {
+  height: 100%;
+  width: 200px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+/* Style the sidenav links and the dropdown button */
+.sidenav a, .dropdown-btn {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #818181;
+  display: block;
+  border: none;
+  background: none;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  outline: none;
+}
+
+/* On mouse-over */
+.sidenav a:hover, .dropdown-btn:hover {
+  color: #f1f1f1;
+}
+
+/* Main content */
+.main {
+  margin-left: 200px; /* Same as the width of the sidenav */
+  font-size: 20px; /* Increased text to enable scrolling */
+  padding: 0px 10px;
+}
+
+/* Add an active class to the active dropdown button */
+.active {
+  background-color: green;
+  color: white;
+}
+
+/* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
+.dropdown-container {
+  display: none;
+  background-color: #262626;
+  padding-left: 8px;
+}
+
+/* Optional: Style the caret down icon */
+.fa-caret-down {
+  float: right;
+  padding-right: 8px;
+}
+
+/* Some media queries for responsiveness */
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+    #p1 {background-color:rgba(255,0,0,0.3);}
+    #p2 {background-color:rgba(0,255,0,0.3);}
+    #p3 {background-color:rgba(0,0,255,0.3);}
+    #p4 {background-color:rgba(192,192,192,0.3);}
+    #p5 {background-color:rgba(255,255,0,0.3);}
+    #p6 {background-color:rgba(255,0,255,0.3);}
+    p.normal {
+  font-weight: normal;
+}
+
+p.light {
+  font-weight: lighter;
+}
+
+p.thick {
+  font-weight: bold;
+}
+
+p.thicker {
+  font-weight: 900;
   
 </style>
 </head>
 <body class="container" >
 
 <header>
-    <body background-color: coral;>
-    <nav class="navbar navbar-default" role="navigation">
-        <div class="container-fluid">
+    <body  id="p5">
+    <nav class="navbar navbar-default" role="navigation" id="p1">
+        <div class="container-fluid" >
         
-            <div class="navbar-header">
+            <div class="navbar-header" >
                
                 <a class="navbar-brand" href="#" >
-                    <span class="glyphicon glyphicon glyphicon-tree-deciduous"></span>
+                    <span class="thick" ></span>
                     SHOPPING Is Fun
                 </a>
         
                 <ul class="nav navbar-nav">
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/about">About</a></li>
+                    <li><a href="/" class="thick">Home</a></li>
+                    <li><a href="/" class="thick">About</a></li>
                 </ul>
               
             </div>
@@ -45,6 +127,23 @@
         <div class="jumbotron">
             <h1>This is great</h1>
             <p>Welcome to Cloud Atlas KULE Shopping Website</p>
+                <div class="sidenav">
+                    <a href="Products">Products</a>
+                    <a href="#Category">Category</a>
+                    <a href="#Styles">Styles</a>
+                    <a href="#Colour">Colour</a>
+                    <a href="#Price">Price</a>
+                    /* <button class="dropdown-btn">Dropdown 
+                            <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-container">
+                         <a href="#">Link 1</a>
+                         <a href="#">Link 2</a>
+                         <a href="#">Link 3</a>
+                    </div> */
+                   
+                </div>
+           
             
         </div>
     </div>
@@ -52,7 +151,7 @@
     <div class="col-sm-4">        
         <div class="well">
             <h3>Look I'm A Sidebar!</h3>
-            <img src="/images/1001.jpg" alt="txt">
+            <img src="../images/1001.jpg" alt="txt">
         </div>
     </div>
 
